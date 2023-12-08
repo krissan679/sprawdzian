@@ -1,0 +1,353 @@
+*,
+::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html {
+	// color-scheme: dark light;
+	font-family: 'Cinzel', serif;
+}
+h1,
+p {
+	font-family: 'Cinzel', serif;
+}
+
+body {
+	min-height: 100vh;
+	overflow-y: hidden;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+}
+li {
+	list-style: none;
+	letter-spacing: 5px;
+}
+a {
+	text-decoration: none;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	min-width: 100%;
+}
+// NAWIGACJA
+.nav {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 65px;
+	box-shadow: -5px -5px 10px black;
+	// background-color: #333;
+	&__logo {
+		position: relative;
+		justify-content: start;
+		top: 25px;
+		left: 25px;
+
+		img {
+			min-width: 50px;
+			height: 75px;
+			border-radius: 50%;
+			box-shadow: 5px 5px 10px;
+			transition: scale 0.3s;
+			&:hover {
+				scale: 1.2;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 50px;
+		margin-right: 50px;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			font-size: 1.2rem;
+		}
+		.blackline {
+			margin-top: 5px;
+			height: 2px;
+			width: 25px;
+			background-color: #000;
+			transition: width 0.3s;
+		}
+
+		li {
+			color: black;
+		}
+	}
+
+	a:hover {
+		.blackline {
+			width: 100%;
+		}
+	}
+}
+
+// COMINGSIDE
+
+.top-side {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	a {
+		margin-top: 150px;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.blackline {
+		margin-top: 15px;
+		height: 2px;
+		width: 50px;
+		background-color: #000;
+		transition: width 0.3s;
+	}
+	a:hover {
+		.blackline {
+			width: 100%;
+		}
+	}
+}
+
+.top-side-text {
+    margin-top: 50px;
+    margin-bottom: 20px;
+	font-size: 2rem;
+}
+
+.text {
+	margin-bottom: 0px;
+	letter-spacing: 10px;
+}
+
+
+
+.logo {
+	img {
+		margin-top: 50px;
+		width: 450px;
+		height: 450px;
+	}
+}
+
+// SEKCJA ABOUTME
+
+.aboutme-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	align-items: end;
+	margin-left: 40px;
+	margin-right: 50px;
+
+	// padding-bottom: 20px;
+	// margin: 20px;
+}
+
+.selfpictures {
+	margin-top: 80px;
+	margin-left: 100px;
+
+	img {
+		min-width: 90px;
+		max-height: 80vh;
+		width: 70vh;
+		object-fit: cover;
+		height: auto;
+		vertical-align: middle;
+		font-style: italic;
+		background-repeat: no-repeat;
+		background-size: cover;
+		shape-margin: 1rem;
+		border-radius: 8px;
+		box-shadow: 5px 5px 10px rgb(75, 72, 72);
+	}
+}
+.description {
+	font-family: 'Gruppo', sans-serif;
+	font-size: 1.2rem;
+}
+
+// SEKCJA PORTFOLIO
+
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(6, 33vw);
+	align-items: center;
+	height: 100svh;
+}
+
+.container1 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 33vw;
+	height: 80vh;
+}
+
+.new-images {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.img-one,
+.img-two,
+.img-three,
+.img-four {
+	position: absolute;
+	width: 150px;
+	object-fit: cover;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-size: cover;
+	shape-margin: 1rem;
+	border-color: 5px black;
+	border-radius: 8px;
+	transition: scale 0.3s linear;
+
+	&:hover {
+		scale: 1.2;
+		z-index: 1;
+	}
+}
+.img-one {
+	right: 20px;
+	bottom: -45px;
+}
+.img-two {
+	left: -5px;
+}
+.img-three {
+	bottom: -290px;
+	right: 20px;
+}
+.img-four {
+	left: -5px;
+	bottom: -360px;
+}
+.wrapper {
+	margin-bottom: -100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		top: 70px;
+		color: black;
+		font-size: 2rem;
+		letter-spacing: 5px;
+
+		.blackline {
+			margin-top: 15px;
+			height: 2px;
+			width: 50px;
+			background-color: #000;
+			transition: width 0.3s;
+		}
+	}
+}
+.wrapper:hover {
+	.blackline {
+		width: 100%;
+	}
+}
+
+// SEKCJE GALERII BRZOSKWINIOWE LATO, MODERN, WIONSA, MINIMALIZM
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(18, 33vw);
+	align-items: center;
+	height: 100svh;
+	gap: 25px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.gallery-image {
+	img {
+		min-width: 300px;
+		height: 75svh;
+		border-radius: 8px;
+		box-shadow: 5px 5px 10px rgb(187, 180, 180);
+	}
+	.theme {
+		display: flex;
+		// justify-content: flex-end;
+		align-items: center;
+	}
+
+	p {
+		// top: -250px;
+		// left: 50px;
+		color: white;
+		// position: absolute;
+	}
+	h1 {
+		// top: -300px;
+		// left: 50px;
+		font-size: 1.5rem;
+		color: white;
+	}
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	// justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 75px;
+	// background-color: #333;
+	// border-top: 3px solid black;
+	box-shadow: 5px 5px 10px black;
+	bottom: 0;
+
+	&__copyright,
+	&__company-name,
+	&__social-media {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__copyright {
+		gap: 10px;
+	}
+
+	&__social-media {
+		gap: 25px;
+		img {
+			height: 20px;
+			min-width: 25px;
+		}
+	}
+}
